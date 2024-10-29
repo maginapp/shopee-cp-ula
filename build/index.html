@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Button with Log</title>
+    <title>Redirect Button with Log Build</title>
     <style>
         #log {
             border: 1px solid #ccc;
@@ -27,6 +27,7 @@
     <button onclick="redirectToShopee1()">Go to Shopee 1</button>
     <button onclick="redirectToShopee2()">Go to Shopee 2 (intent 2)</button>
     <button onclick="redirectTolazada3()">Go to Lazada 3</button>
+    <button onclick="redirectTolazada4()">Go to google play 4</button>
 
     <div id="log"></div>
 
@@ -69,6 +70,14 @@
                 log("3 Redirect triggered successfully.");
             } catch (error) {
                 log(`3 Error occurred: ${error.message}`);
+            }
+        }
+        function redirectTolazada4() {
+            log("4 google play");
+            try {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.shopee.my";
+            } catch (error) {
+                log(`4 Error occurred: ${error.message}`);
             }
         }
     </script>
